@@ -1,0 +1,1175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.liw.persistence.AppFdRrUserMapper" >
+  <resultMap id="BaseResultMap" type="com.liw.model.AppFdRrUser" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="dateCreated" property="datecreated" jdbcType="TIMESTAMP" />
+    <result column="dateModified" property="datemodified" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.liw.model.AppFdRrUserWithBLOBs" extends="BaseResultMap" >
+    <result column="c_technique" property="cTechnique" jdbcType="LONGVARCHAR" />
+    <result column="c_mobile_id" property="cMobileId" jdbcType="LONGVARCHAR" />
+    <result column="c_birthdatePermission" property="cBirthdatepermission" jdbcType="LONGVARCHAR" />
+    <result column="c_location" property="cLocation" jdbcType="LONGVARCHAR" />
+    <result column="c_devRqstDate" property="cDevrqstdate" jdbcType="LONGVARCHAR" />
+    <result column="c_identified" property="cIdentified" jdbcType="LONGVARCHAR" />
+    <result column="c_password" property="cPassword" jdbcType="LONGVARCHAR" />
+    <result column="c_city" property="cCity" jdbcType="LONGVARCHAR" />
+    <result column="c_weixin_id" property="cWeixinId" jdbcType="LONGVARCHAR" />
+    <result column="c_setPasswordTime" property="cSetpasswordtime" jdbcType="LONGVARCHAR" />
+    <result column="c_devProfile" property="cDevprofile" jdbcType="LONGVARCHAR" />
+    <result column="c_username" property="cUsername" jdbcType="LONGVARCHAR" />
+    <result column="c_level" property="cLevel" jdbcType="LONGVARCHAR" />
+    <result column="c_skilledIn" property="cSkilledin" jdbcType="LONGVARCHAR" />
+    <result column="c_province" property="cProvince" jdbcType="LONGVARCHAR" />
+    <result column="c_gender" property="cGender" jdbcType="LONGVARCHAR" />
+    <result column="c_licensePhoto" property="cLicensephoto" jdbcType="LONGVARCHAR" />
+    <result column="c_email_id" property="cEmailId" jdbcType="LONGVARCHAR" />
+    <result column="c_contactQQ" property="cContactqq" jdbcType="LONGVARCHAR" />
+    <result column="c_regiUriAvailable" property="cRegiuriavailable" jdbcType="LONGVARCHAR" />
+    <result column="c_enterprise" property="cEnterprise" jdbcType="LONGVARCHAR" />
+    <result column="c_devBrand" property="cDevbrand" jdbcType="LONGVARCHAR" />
+    <result column="c_identityCard" property="cIdentitycard" jdbcType="LONGVARCHAR" />
+    <result column="c_devRqstStatus" property="cDevrqststatus" jdbcType="LONGVARCHAR" />
+    <result column="c_companyName" property="cCompanyname" jdbcType="LONGVARCHAR" />
+    <result column="c_avatar" property="cAvatar" jdbcType="LONGVARCHAR" />
+    <result column="c_qq_id" property="cQqId" jdbcType="LONGVARCHAR" />
+    <result column="c_country" property="cCountry" jdbcType="LONGVARCHAR" />
+    <result column="c_identCardPhoto" property="cIdentcardphoto" jdbcType="LONGVARCHAR" />
+    <result column="c_active" property="cActive" jdbcType="LONGVARCHAR" />
+    <result column="c_regiUri" property="cRegiuri" jdbcType="LONGVARCHAR" />
+    <result column="c_setPasswordUri" property="cSetpassworduri" jdbcType="LONGVARCHAR" />
+    <result column="c_regiRequestTime" property="cRegirequesttime" jdbcType="LONGVARCHAR" />
+    <result column="c_adminComment" property="cAdmincomment" jdbcType="LONGVARCHAR" />
+    <result column="c_registerDate" property="cRegisterdate" jdbcType="LONGVARCHAR" />
+    <result column="c_pwUriAvailable" property="cPwuriavailable" jdbcType="LONGVARCHAR" />
+    <result column="c_mobilePermission" property="cMobilepermission" jdbcType="LONGVARCHAR" />
+    <result column="c_devCertifiedDate" property="cDevcertifieddate" jdbcType="LONGVARCHAR" />
+    <result column="c_contact" property="cContact" jdbcType="LONGVARCHAR" />
+    <result column="c_qqPermission" property="cQqpermission" jdbcType="LONGVARCHAR" />
+    <result column="c_birthdate" property="cBirthdate" jdbcType="LONGVARCHAR" />
+    <result column="c_devFlag" property="cDevflag" jdbcType="LONGVARCHAR" />
+    <result column="c_devApproveDate" property="cDevapprovedate" jdbcType="LONGVARCHAR" />
+    <result column="c_profile" property="cProfile" jdbcType="LONGVARCHAR" />
+    <result column="c_developerType" property="cDevelopertype" jdbcType="LONGVARCHAR" />
+    <result column="c_licenseNum" property="cLicensenum" jdbcType="LONGVARCHAR" />
+    <result column="c_identityType" property="cIdentitytype" jdbcType="LONGVARCHAR" />
+    <result column="c_contactPhone" property="cContactphone" jdbcType="LONGVARCHAR" />
+    <result column="c_itPerson" property="cItperson" jdbcType="LONGVARCHAR" />
+    <result column="c_devRqstUpdate" property="cDevrqstupdate" jdbcType="LONGVARCHAR" />
+    <result column="c_weibo_id" property="cWeiboId" jdbcType="LONGVARCHAR" />
+    <result column="c_devLevel" property="cDevlevel" jdbcType="LONGVARCHAR" />
+    <result column="c_realName" property="cRealname" jdbcType="LONGVARCHAR" />
+    <result column="c_devEmailInfo" property="cDevemailinfo" jdbcType="LONGVARCHAR" />
+    <result column="c_messageMail" property="cMessagemail" jdbcType="LONGVARCHAR" />
+    <result column="c_internalName" property="cInternalname" jdbcType="LONGVARCHAR" />
+    <result column="c_internalRoleRemark" property="cInternalroleremark" jdbcType="LONGVARCHAR" />
+    <result column="c_internalRole" property="cInternalrole" jdbcType="LONGVARCHAR" />
+    <result column="c_internal" property="cInternal" jdbcType="LONGVARCHAR" />
+    <result column="c_favorableRate" property="cFavorablerate" jdbcType="LONGVARCHAR" />
+    <result column="c_generalScore" property="cGeneralscore" jdbcType="LONGVARCHAR" />
+    <result column="c_devFavorableRate" property="cDevfavorablerate" jdbcType="LONGVARCHAR" />
+    <result column="c_devGeneralScore" property="cDevgeneralscore" jdbcType="LONGVARCHAR" />
+    <result column="c_identCardPhotoVer" property="cIdentcardphotover" jdbcType="LONGVARCHAR" />
+    <result column="c_licensePhotoVer" property="cLicensephotover" jdbcType="LONGVARCHAR" />
+    <result column="c_identCardPhotoStamp" property="cIdentcardphotostamp" jdbcType="LONGVARCHAR" />
+    <result column="c_licensePhotoStamp" property="cLicensephotostamp" jdbcType="LONGVARCHAR" />
+    <result column="c_registerType" property="cRegistertype" jdbcType="LONGVARCHAR" />
+    <result column="c_emailPermission" property="cEmailpermission" jdbcType="LONGVARCHAR" />
+    <result column="c_rename" property="cRename" jdbcType="LONGVARCHAR" />
+    <result column="c_weibo_openid" property="cWeiboOpenid" jdbcType="LONGVARCHAR" />
+    <result column="c_qq_token" property="cQqToken" jdbcType="LONGVARCHAR" />
+    <result column="c_weibo_expiry" property="cWeiboExpiry" jdbcType="LONGVARCHAR" />
+    <result column="c_qq_expiry" property="cQqExpiry" jdbcType="LONGVARCHAR" />
+    <result column="c_weixin_openid" property="cWeixinOpenid" jdbcType="LONGVARCHAR" />
+    <result column="c_weixin_expiry" property="cWeixinExpiry" jdbcType="LONGVARCHAR" />
+    <result column="c_weixin_token" property="cWeixinToken" jdbcType="LONGVARCHAR" />
+    <result column="c_weibo_token" property="cWeiboToken" jdbcType="LONGVARCHAR" />
+    <result column="c_qq_openid" property="cQqOpenid" jdbcType="LONGVARCHAR" />
+    <result column="c_identifyDate" property="cIdentifydate" jdbcType="LONGVARCHAR" />
+    <result column="c_cloudTrialNum" property="cCloudtrialnum" jdbcType="LONGVARCHAR" />
+    <result column="c_bank" property="cBank" jdbcType="LONGVARCHAR" />
+    <result column="c_bankAccountName" property="cBankaccountname" jdbcType="LONGVARCHAR" />
+    <result column="c_bankBranch" property="cBankbranch" jdbcType="LONGVARCHAR" />
+    <result column="c_bankAccount" property="cBankaccount" jdbcType="LONGVARCHAR" />
+    <result column="c_point" property="cPoint" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, dateCreated, dateModified
+  </sql>
+  <sql id="Blob_Column_List" >
+    c_technique, c_mobile_id, c_birthdatePermission, c_location, c_devRqstDate, c_identified, 
+    c_password, c_city, c_weixin_id, c_setPasswordTime, c_devProfile, c_username, c_level, 
+    c_skilledIn, c_province, c_gender, c_licensePhoto, c_email_id, c_contactQQ, c_regiUriAvailable, 
+    c_enterprise, c_devBrand, c_identityCard, c_devRqstStatus, c_companyName, c_avatar, 
+    c_qq_id, c_country, c_identCardPhoto, c_active, c_regiUri, c_setPasswordUri, c_regiRequestTime, 
+    c_adminComment, c_registerDate, c_pwUriAvailable, c_mobilePermission, c_devCertifiedDate, 
+    c_contact, c_qqPermission, c_birthdate, c_devFlag, c_devApproveDate, c_profile, c_developerType, 
+    c_licenseNum, c_identityType, c_contactPhone, c_itPerson, c_devRqstUpdate, c_weibo_id, 
+    c_devLevel, c_realName, c_devEmailInfo, c_messageMail, c_internalName, c_internalRoleRemark, 
+    c_internalRole, c_internal, c_favorableRate, c_generalScore, c_devFavorableRate, 
+    c_devGeneralScore, c_identCardPhotoVer, c_licensePhotoVer, c_identCardPhotoStamp, 
+    c_licensePhotoStamp, c_registerType, c_emailPermission, c_rename, c_weibo_openid, 
+    c_qq_token, c_weibo_expiry, c_qq_expiry, c_weixin_openid, c_weixin_expiry, c_weixin_token, 
+    c_weibo_token, c_qq_openid, c_identifyDate, c_cloudTrialNum, c_bank, c_bankAccountName, 
+    c_bankBranch, c_bankAccount, c_point
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.liw.model.AppFdRrUserExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from app_fd_rr_user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.liw.model.AppFdRrUserExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from app_fd_rr_user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from app_fd_rr_user
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from app_fd_rr_user
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.liw.model.AppFdRrUserWithBLOBs" >
+    insert into app_fd_rr_user (id, dateCreated, dateModified, 
+      c_technique, c_mobile_id, c_birthdatePermission, 
+      c_location, c_devRqstDate, c_identified, 
+      c_password, c_city, c_weixin_id, 
+      c_setPasswordTime, c_devProfile, 
+      c_username, c_level, c_skilledIn, 
+      c_province, c_gender, c_licensePhoto, 
+      c_email_id, c_contactQQ, c_regiUriAvailable, 
+      c_enterprise, c_devBrand, c_identityCard, 
+      c_devRqstStatus, c_companyName, c_avatar, 
+      c_qq_id, c_country, c_identCardPhoto, 
+      c_active, c_regiUri, c_setPasswordUri, 
+      c_regiRequestTime, c_adminComment, 
+      c_registerDate, c_pwUriAvailable, 
+      c_mobilePermission, c_devCertifiedDate, 
+      c_contact, c_qqPermission, c_birthdate, 
+      c_devFlag, c_devApproveDate, c_profile, 
+      c_developerType, c_licenseNum, c_identityType, 
+      c_contactPhone, c_itPerson, c_devRqstUpdate, 
+      c_weibo_id, c_devLevel, c_realName, 
+      c_devEmailInfo, c_messageMail, c_internalName, 
+      c_internalRoleRemark, c_internalRole, 
+      c_internal, c_favorableRate, c_generalScore, 
+      c_devFavorableRate, c_devGeneralScore, 
+      c_identCardPhotoVer, c_licensePhotoVer, 
+      c_identCardPhotoStamp, c_licensePhotoStamp, 
+      c_registerType, c_emailPermission, 
+      c_rename, c_weibo_openid, c_qq_token, 
+      c_weibo_expiry, c_qq_expiry, c_weixin_openid, 
+      c_weixin_expiry, c_weixin_token, c_weibo_token, 
+      c_qq_openid, c_identifyDate, c_cloudTrialNum, 
+      c_bank, c_bankAccountName, c_bankBranch, 
+      c_bankAccount, c_point)
+    values (#{id,jdbcType=VARCHAR}, #{datecreated,jdbcType=TIMESTAMP}, #{datemodified,jdbcType=TIMESTAMP}, 
+      #{cTechnique,jdbcType=LONGVARCHAR}, #{cMobileId,jdbcType=LONGVARCHAR}, #{cBirthdatepermission,jdbcType=LONGVARCHAR}, 
+      #{cLocation,jdbcType=LONGVARCHAR}, #{cDevrqstdate,jdbcType=LONGVARCHAR}, #{cIdentified,jdbcType=LONGVARCHAR}, 
+      #{cPassword,jdbcType=LONGVARCHAR}, #{cCity,jdbcType=LONGVARCHAR}, #{cWeixinId,jdbcType=LONGVARCHAR}, 
+      #{cSetpasswordtime,jdbcType=LONGVARCHAR}, #{cDevprofile,jdbcType=LONGVARCHAR}, 
+      #{cUsername,jdbcType=LONGVARCHAR}, #{cLevel,jdbcType=LONGVARCHAR}, #{cSkilledin,jdbcType=LONGVARCHAR}, 
+      #{cProvince,jdbcType=LONGVARCHAR}, #{cGender,jdbcType=LONGVARCHAR}, #{cLicensephoto,jdbcType=LONGVARCHAR}, 
+      #{cEmailId,jdbcType=LONGVARCHAR}, #{cContactqq,jdbcType=LONGVARCHAR}, #{cRegiuriavailable,jdbcType=LONGVARCHAR}, 
+      #{cEnterprise,jdbcType=LONGVARCHAR}, #{cDevbrand,jdbcType=LONGVARCHAR}, #{cIdentitycard,jdbcType=LONGVARCHAR}, 
+      #{cDevrqststatus,jdbcType=LONGVARCHAR}, #{cCompanyname,jdbcType=LONGVARCHAR}, #{cAvatar,jdbcType=LONGVARCHAR}, 
+      #{cQqId,jdbcType=LONGVARCHAR}, #{cCountry,jdbcType=LONGVARCHAR}, #{cIdentcardphoto,jdbcType=LONGVARCHAR}, 
+      #{cActive,jdbcType=LONGVARCHAR}, #{cRegiuri,jdbcType=LONGVARCHAR}, #{cSetpassworduri,jdbcType=LONGVARCHAR}, 
+      #{cRegirequesttime,jdbcType=LONGVARCHAR}, #{cAdmincomment,jdbcType=LONGVARCHAR}, 
+      #{cRegisterdate,jdbcType=LONGVARCHAR}, #{cPwuriavailable,jdbcType=LONGVARCHAR}, 
+      #{cMobilepermission,jdbcType=LONGVARCHAR}, #{cDevcertifieddate,jdbcType=LONGVARCHAR}, 
+      #{cContact,jdbcType=LONGVARCHAR}, #{cQqpermission,jdbcType=LONGVARCHAR}, #{cBirthdate,jdbcType=LONGVARCHAR}, 
+      #{cDevflag,jdbcType=LONGVARCHAR}, #{cDevapprovedate,jdbcType=LONGVARCHAR}, #{cProfile,jdbcType=LONGVARCHAR}, 
+      #{cDevelopertype,jdbcType=LONGVARCHAR}, #{cLicensenum,jdbcType=LONGVARCHAR}, #{cIdentitytype,jdbcType=LONGVARCHAR}, 
+      #{cContactphone,jdbcType=LONGVARCHAR}, #{cItperson,jdbcType=LONGVARCHAR}, #{cDevrqstupdate,jdbcType=LONGVARCHAR}, 
+      #{cWeiboId,jdbcType=LONGVARCHAR}, #{cDevlevel,jdbcType=LONGVARCHAR}, #{cRealname,jdbcType=LONGVARCHAR}, 
+      #{cDevemailinfo,jdbcType=LONGVARCHAR}, #{cMessagemail,jdbcType=LONGVARCHAR}, #{cInternalname,jdbcType=LONGVARCHAR}, 
+      #{cInternalroleremark,jdbcType=LONGVARCHAR}, #{cInternalrole,jdbcType=LONGVARCHAR}, 
+      #{cInternal,jdbcType=LONGVARCHAR}, #{cFavorablerate,jdbcType=LONGVARCHAR}, #{cGeneralscore,jdbcType=LONGVARCHAR}, 
+      #{cDevfavorablerate,jdbcType=LONGVARCHAR}, #{cDevgeneralscore,jdbcType=LONGVARCHAR}, 
+      #{cIdentcardphotover,jdbcType=LONGVARCHAR}, #{cLicensephotover,jdbcType=LONGVARCHAR}, 
+      #{cIdentcardphotostamp,jdbcType=LONGVARCHAR}, #{cLicensephotostamp,jdbcType=LONGVARCHAR}, 
+      #{cRegistertype,jdbcType=LONGVARCHAR}, #{cEmailpermission,jdbcType=LONGVARCHAR}, 
+      #{cRename,jdbcType=LONGVARCHAR}, #{cWeiboOpenid,jdbcType=LONGVARCHAR}, #{cQqToken,jdbcType=LONGVARCHAR}, 
+      #{cWeiboExpiry,jdbcType=LONGVARCHAR}, #{cQqExpiry,jdbcType=LONGVARCHAR}, #{cWeixinOpenid,jdbcType=LONGVARCHAR}, 
+      #{cWeixinExpiry,jdbcType=LONGVARCHAR}, #{cWeixinToken,jdbcType=LONGVARCHAR}, #{cWeiboToken,jdbcType=LONGVARCHAR}, 
+      #{cQqOpenid,jdbcType=LONGVARCHAR}, #{cIdentifydate,jdbcType=LONGVARCHAR}, #{cCloudtrialnum,jdbcType=LONGVARCHAR}, 
+      #{cBank,jdbcType=LONGVARCHAR}, #{cBankaccountname,jdbcType=LONGVARCHAR}, #{cBankbranch,jdbcType=LONGVARCHAR}, 
+      #{cBankaccount,jdbcType=LONGVARCHAR}, #{cPoint,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.liw.model.AppFdRrUserWithBLOBs" >
+    insert into app_fd_rr_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="datecreated != null" >
+        dateCreated,
+      </if>
+      <if test="datemodified != null" >
+        dateModified,
+      </if>
+      <if test="cTechnique != null" >
+        c_technique,
+      </if>
+      <if test="cMobileId != null" >
+        c_mobile_id,
+      </if>
+      <if test="cBirthdatepermission != null" >
+        c_birthdatePermission,
+      </if>
+      <if test="cLocation != null" >
+        c_location,
+      </if>
+      <if test="cDevrqstdate != null" >
+        c_devRqstDate,
+      </if>
+      <if test="cIdentified != null" >
+        c_identified,
+      </if>
+      <if test="cPassword != null" >
+        c_password,
+      </if>
+      <if test="cCity != null" >
+        c_city,
+      </if>
+      <if test="cWeixinId != null" >
+        c_weixin_id,
+      </if>
+      <if test="cSetpasswordtime != null" >
+        c_setPasswordTime,
+      </if>
+      <if test="cDevprofile != null" >
+        c_devProfile,
+      </if>
+      <if test="cUsername != null" >
+        c_username,
+      </if>
+      <if test="cLevel != null" >
+        c_level,
+      </if>
+      <if test="cSkilledin != null" >
+        c_skilledIn,
+      </if>
+      <if test="cProvince != null" >
+        c_province,
+      </if>
+      <if test="cGender != null" >
+        c_gender,
+      </if>
+      <if test="cLicensephoto != null" >
+        c_licensePhoto,
+      </if>
+      <if test="cEmailId != null" >
+        c_email_id,
+      </if>
+      <if test="cContactqq != null" >
+        c_contactQQ,
+      </if>
+      <if test="cRegiuriavailable != null" >
+        c_regiUriAvailable,
+      </if>
+      <if test="cEnterprise != null" >
+        c_enterprise,
+      </if>
+      <if test="cDevbrand != null" >
+        c_devBrand,
+      </if>
+      <if test="cIdentitycard != null" >
+        c_identityCard,
+      </if>
+      <if test="cDevrqststatus != null" >
+        c_devRqstStatus,
+      </if>
+      <if test="cCompanyname != null" >
+        c_companyName,
+      </if>
+      <if test="cAvatar != null" >
+        c_avatar,
+      </if>
+      <if test="cQqId != null" >
+        c_qq_id,
+      </if>
+      <if test="cCountry != null" >
+        c_country,
+      </if>
+      <if test="cIdentcardphoto != null" >
+        c_identCardPhoto,
+      </if>
+      <if test="cActive != null" >
+        c_active,
+      </if>
+      <if test="cRegiuri != null" >
+        c_regiUri,
+      </if>
+      <if test="cSetpassworduri != null" >
+        c_setPasswordUri,
+      </if>
+      <if test="cRegirequesttime != null" >
+        c_regiRequestTime,
+      </if>
+      <if test="cAdmincomment != null" >
+        c_adminComment,
+      </if>
+      <if test="cRegisterdate != null" >
+        c_registerDate,
+      </if>
+      <if test="cPwuriavailable != null" >
+        c_pwUriAvailable,
+      </if>
+      <if test="cMobilepermission != null" >
+        c_mobilePermission,
+      </if>
+      <if test="cDevcertifieddate != null" >
+        c_devCertifiedDate,
+      </if>
+      <if test="cContact != null" >
+        c_contact,
+      </if>
+      <if test="cQqpermission != null" >
+        c_qqPermission,
+      </if>
+      <if test="cBirthdate != null" >
+        c_birthdate,
+      </if>
+      <if test="cDevflag != null" >
+        c_devFlag,
+      </if>
+      <if test="cDevapprovedate != null" >
+        c_devApproveDate,
+      </if>
+      <if test="cProfile != null" >
+        c_profile,
+      </if>
+      <if test="cDevelopertype != null" >
+        c_developerType,
+      </if>
+      <if test="cLicensenum != null" >
+        c_licenseNum,
+      </if>
+      <if test="cIdentitytype != null" >
+        c_identityType,
+      </if>
+      <if test="cContactphone != null" >
+        c_contactPhone,
+      </if>
+      <if test="cItperson != null" >
+        c_itPerson,
+      </if>
+      <if test="cDevrqstupdate != null" >
+        c_devRqstUpdate,
+      </if>
+      <if test="cWeiboId != null" >
+        c_weibo_id,
+      </if>
+      <if test="cDevlevel != null" >
+        c_devLevel,
+      </if>
+      <if test="cRealname != null" >
+        c_realName,
+      </if>
+      <if test="cDevemailinfo != null" >
+        c_devEmailInfo,
+      </if>
+      <if test="cMessagemail != null" >
+        c_messageMail,
+      </if>
+      <if test="cInternalname != null" >
+        c_internalName,
+      </if>
+      <if test="cInternalroleremark != null" >
+        c_internalRoleRemark,
+      </if>
+      <if test="cInternalrole != null" >
+        c_internalRole,
+      </if>
+      <if test="cInternal != null" >
+        c_internal,
+      </if>
+      <if test="cFavorablerate != null" >
+        c_favorableRate,
+      </if>
+      <if test="cGeneralscore != null" >
+        c_generalScore,
+      </if>
+      <if test="cDevfavorablerate != null" >
+        c_devFavorableRate,
+      </if>
+      <if test="cDevgeneralscore != null" >
+        c_devGeneralScore,
+      </if>
+      <if test="cIdentcardphotover != null" >
+        c_identCardPhotoVer,
+      </if>
+      <if test="cLicensephotover != null" >
+        c_licensePhotoVer,
+      </if>
+      <if test="cIdentcardphotostamp != null" >
+        c_identCardPhotoStamp,
+      </if>
+      <if test="cLicensephotostamp != null" >
+        c_licensePhotoStamp,
+      </if>
+      <if test="cRegistertype != null" >
+        c_registerType,
+      </if>
+      <if test="cEmailpermission != null" >
+        c_emailPermission,
+      </if>
+      <if test="cRename != null" >
+        c_rename,
+      </if>
+      <if test="cWeiboOpenid != null" >
+        c_weibo_openid,
+      </if>
+      <if test="cQqToken != null" >
+        c_qq_token,
+      </if>
+      <if test="cWeiboExpiry != null" >
+        c_weibo_expiry,
+      </if>
+      <if test="cQqExpiry != null" >
+        c_qq_expiry,
+      </if>
+      <if test="cWeixinOpenid != null" >
+        c_weixin_openid,
+      </if>
+      <if test="cWeixinExpiry != null" >
+        c_weixin_expiry,
+      </if>
+      <if test="cWeixinToken != null" >
+        c_weixin_token,
+      </if>
+      <if test="cWeiboToken != null" >
+        c_weibo_token,
+      </if>
+      <if test="cQqOpenid != null" >
+        c_qq_openid,
+      </if>
+      <if test="cIdentifydate != null" >
+        c_identifyDate,
+      </if>
+      <if test="cCloudtrialnum != null" >
+        c_cloudTrialNum,
+      </if>
+      <if test="cBank != null" >
+        c_bank,
+      </if>
+      <if test="cBankaccountname != null" >
+        c_bankAccountName,
+      </if>
+      <if test="cBankbranch != null" >
+        c_bankBranch,
+      </if>
+      <if test="cBankaccount != null" >
+        c_bankAccount,
+      </if>
+      <if test="cPoint != null" >
+        c_point,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="datecreated != null" >
+        #{datecreated,jdbcType=TIMESTAMP},
+      </if>
+      <if test="datemodified != null" >
+        #{datemodified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cTechnique != null" >
+        #{cTechnique,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cMobileId != null" >
+        #{cMobileId,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cBirthdatepermission != null" >
+        #{cBirthdatepermission,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cLocation != null" >
+        #{cLocation,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevrqstdate != null" >
+        #{cDevrqstdate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cIdentified != null" >
+        #{cIdentified,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cPassword != null" >
+        #{cPassword,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cCity != null" >
+        #{cCity,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeixinId != null" >
+        #{cWeixinId,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cSetpasswordtime != null" >
+        #{cSetpasswordtime,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevprofile != null" >
+        #{cDevprofile,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cUsername != null" >
+        #{cUsername,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cLevel != null" >
+        #{cLevel,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cSkilledin != null" >
+        #{cSkilledin,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cProvince != null" >
+        #{cProvince,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cGender != null" >
+        #{cGender,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cLicensephoto != null" >
+        #{cLicensephoto,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cEmailId != null" >
+        #{cEmailId,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cContactqq != null" >
+        #{cContactqq,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cRegiuriavailable != null" >
+        #{cRegiuriavailable,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cEnterprise != null" >
+        #{cEnterprise,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevbrand != null" >
+        #{cDevbrand,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cIdentitycard != null" >
+        #{cIdentitycard,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevrqststatus != null" >
+        #{cDevrqststatus,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cCompanyname != null" >
+        #{cCompanyname,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cAvatar != null" >
+        #{cAvatar,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cQqId != null" >
+        #{cQqId,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cCountry != null" >
+        #{cCountry,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cIdentcardphoto != null" >
+        #{cIdentcardphoto,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cActive != null" >
+        #{cActive,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cRegiuri != null" >
+        #{cRegiuri,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cSetpassworduri != null" >
+        #{cSetpassworduri,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cRegirequesttime != null" >
+        #{cRegirequesttime,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cAdmincomment != null" >
+        #{cAdmincomment,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cRegisterdate != null" >
+        #{cRegisterdate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cPwuriavailable != null" >
+        #{cPwuriavailable,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cMobilepermission != null" >
+        #{cMobilepermission,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevcertifieddate != null" >
+        #{cDevcertifieddate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cContact != null" >
+        #{cContact,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cQqpermission != null" >
+        #{cQqpermission,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cBirthdate != null" >
+        #{cBirthdate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevflag != null" >
+        #{cDevflag,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevapprovedate != null" >
+        #{cDevapprovedate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cProfile != null" >
+        #{cProfile,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevelopertype != null" >
+        #{cDevelopertype,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cLicensenum != null" >
+        #{cLicensenum,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cIdentitytype != null" >
+        #{cIdentitytype,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cContactphone != null" >
+        #{cContactphone,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cItperson != null" >
+        #{cItperson,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevrqstupdate != null" >
+        #{cDevrqstupdate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeiboId != null" >
+        #{cWeiboId,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevlevel != null" >
+        #{cDevlevel,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cRealname != null" >
+        #{cRealname,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevemailinfo != null" >
+        #{cDevemailinfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cMessagemail != null" >
+        #{cMessagemail,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cInternalname != null" >
+        #{cInternalname,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cInternalroleremark != null" >
+        #{cInternalroleremark,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cInternalrole != null" >
+        #{cInternalrole,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cInternal != null" >
+        #{cInternal,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cFavorablerate != null" >
+        #{cFavorablerate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cGeneralscore != null" >
+        #{cGeneralscore,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevfavorablerate != null" >
+        #{cDevfavorablerate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevgeneralscore != null" >
+        #{cDevgeneralscore,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cIdentcardphotover != null" >
+        #{cIdentcardphotover,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cLicensephotover != null" >
+        #{cLicensephotover,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cIdentcardphotostamp != null" >
+        #{cIdentcardphotostamp,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cLicensephotostamp != null" >
+        #{cLicensephotostamp,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cRegistertype != null" >
+        #{cRegistertype,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cEmailpermission != null" >
+        #{cEmailpermission,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cRename != null" >
+        #{cRename,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeiboOpenid != null" >
+        #{cWeiboOpenid,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cQqToken != null" >
+        #{cQqToken,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeiboExpiry != null" >
+        #{cWeiboExpiry,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cQqExpiry != null" >
+        #{cQqExpiry,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeixinOpenid != null" >
+        #{cWeixinOpenid,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeixinExpiry != null" >
+        #{cWeixinExpiry,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeixinToken != null" >
+        #{cWeixinToken,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeiboToken != null" >
+        #{cWeiboToken,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cQqOpenid != null" >
+        #{cQqOpenid,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cIdentifydate != null" >
+        #{cIdentifydate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cCloudtrialnum != null" >
+        #{cCloudtrialnum,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cBank != null" >
+        #{cBank,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cBankaccountname != null" >
+        #{cBankaccountname,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cBankbranch != null" >
+        #{cBankbranch,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cBankaccount != null" >
+        #{cBankaccount,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cPoint != null" >
+        #{cPoint,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.liw.model.AppFdRrUserExample" resultType="java.lang.Integer" >
+    select count(*) from app_fd_rr_user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByPrimaryKeySelective" parameterType="com.liw.model.AppFdRrUserWithBLOBs" >
+    update app_fd_rr_user
+    <set >
+      <if test="datecreated != null" >
+        dateCreated = #{datecreated,jdbcType=TIMESTAMP},
+      </if>
+      <if test="datemodified != null" >
+        dateModified = #{datemodified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cTechnique != null" >
+        c_technique = #{cTechnique,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cMobileId != null" >
+        c_mobile_id = #{cMobileId,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cBirthdatepermission != null" >
+        c_birthdatePermission = #{cBirthdatepermission,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cLocation != null" >
+        c_location = #{cLocation,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevrqstdate != null" >
+        c_devRqstDate = #{cDevrqstdate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cIdentified != null" >
+        c_identified = #{cIdentified,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cPassword != null" >
+        c_password = #{cPassword,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cCity != null" >
+        c_city = #{cCity,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeixinId != null" >
+        c_weixin_id = #{cWeixinId,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cSetpasswordtime != null" >
+        c_setPasswordTime = #{cSetpasswordtime,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevprofile != null" >
+        c_devProfile = #{cDevprofile,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cUsername != null" >
+        c_username = #{cUsername,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cLevel != null" >
+        c_level = #{cLevel,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cSkilledin != null" >
+        c_skilledIn = #{cSkilledin,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cProvince != null" >
+        c_province = #{cProvince,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cGender != null" >
+        c_gender = #{cGender,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cLicensephoto != null" >
+        c_licensePhoto = #{cLicensephoto,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cEmailId != null" >
+        c_email_id = #{cEmailId,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cContactqq != null" >
+        c_contactQQ = #{cContactqq,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cRegiuriavailable != null" >
+        c_regiUriAvailable = #{cRegiuriavailable,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cEnterprise != null" >
+        c_enterprise = #{cEnterprise,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevbrand != null" >
+        c_devBrand = #{cDevbrand,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cIdentitycard != null" >
+        c_identityCard = #{cIdentitycard,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevrqststatus != null" >
+        c_devRqstStatus = #{cDevrqststatus,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cCompanyname != null" >
+        c_companyName = #{cCompanyname,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cAvatar != null" >
+        c_avatar = #{cAvatar,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cQqId != null" >
+        c_qq_id = #{cQqId,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cCountry != null" >
+        c_country = #{cCountry,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cIdentcardphoto != null" >
+        c_identCardPhoto = #{cIdentcardphoto,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cActive != null" >
+        c_active = #{cActive,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cRegiuri != null" >
+        c_regiUri = #{cRegiuri,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cSetpassworduri != null" >
+        c_setPasswordUri = #{cSetpassworduri,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cRegirequesttime != null" >
+        c_regiRequestTime = #{cRegirequesttime,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cAdmincomment != null" >
+        c_adminComment = #{cAdmincomment,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cRegisterdate != null" >
+        c_registerDate = #{cRegisterdate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cPwuriavailable != null" >
+        c_pwUriAvailable = #{cPwuriavailable,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cMobilepermission != null" >
+        c_mobilePermission = #{cMobilepermission,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevcertifieddate != null" >
+        c_devCertifiedDate = #{cDevcertifieddate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cContact != null" >
+        c_contact = #{cContact,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cQqpermission != null" >
+        c_qqPermission = #{cQqpermission,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cBirthdate != null" >
+        c_birthdate = #{cBirthdate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevflag != null" >
+        c_devFlag = #{cDevflag,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevapprovedate != null" >
+        c_devApproveDate = #{cDevapprovedate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cProfile != null" >
+        c_profile = #{cProfile,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevelopertype != null" >
+        c_developerType = #{cDevelopertype,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cLicensenum != null" >
+        c_licenseNum = #{cLicensenum,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cIdentitytype != null" >
+        c_identityType = #{cIdentitytype,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cContactphone != null" >
+        c_contactPhone = #{cContactphone,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cItperson != null" >
+        c_itPerson = #{cItperson,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevrqstupdate != null" >
+        c_devRqstUpdate = #{cDevrqstupdate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeiboId != null" >
+        c_weibo_id = #{cWeiboId,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevlevel != null" >
+        c_devLevel = #{cDevlevel,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cRealname != null" >
+        c_realName = #{cRealname,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevemailinfo != null" >
+        c_devEmailInfo = #{cDevemailinfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cMessagemail != null" >
+        c_messageMail = #{cMessagemail,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cInternalname != null" >
+        c_internalName = #{cInternalname,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cInternalroleremark != null" >
+        c_internalRoleRemark = #{cInternalroleremark,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cInternalrole != null" >
+        c_internalRole = #{cInternalrole,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cInternal != null" >
+        c_internal = #{cInternal,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cFavorablerate != null" >
+        c_favorableRate = #{cFavorablerate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cGeneralscore != null" >
+        c_generalScore = #{cGeneralscore,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevfavorablerate != null" >
+        c_devFavorableRate = #{cDevfavorablerate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cDevgeneralscore != null" >
+        c_devGeneralScore = #{cDevgeneralscore,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cIdentcardphotover != null" >
+        c_identCardPhotoVer = #{cIdentcardphotover,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cLicensephotover != null" >
+        c_licensePhotoVer = #{cLicensephotover,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cIdentcardphotostamp != null" >
+        c_identCardPhotoStamp = #{cIdentcardphotostamp,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cLicensephotostamp != null" >
+        c_licensePhotoStamp = #{cLicensephotostamp,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cRegistertype != null" >
+        c_registerType = #{cRegistertype,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cEmailpermission != null" >
+        c_emailPermission = #{cEmailpermission,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cRename != null" >
+        c_rename = #{cRename,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeiboOpenid != null" >
+        c_weibo_openid = #{cWeiboOpenid,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cQqToken != null" >
+        c_qq_token = #{cQqToken,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeiboExpiry != null" >
+        c_weibo_expiry = #{cWeiboExpiry,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cQqExpiry != null" >
+        c_qq_expiry = #{cQqExpiry,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeixinOpenid != null" >
+        c_weixin_openid = #{cWeixinOpenid,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeixinExpiry != null" >
+        c_weixin_expiry = #{cWeixinExpiry,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeixinToken != null" >
+        c_weixin_token = #{cWeixinToken,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cWeiboToken != null" >
+        c_weibo_token = #{cWeiboToken,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cQqOpenid != null" >
+        c_qq_openid = #{cQqOpenid,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cIdentifydate != null" >
+        c_identifyDate = #{cIdentifydate,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cCloudtrialnum != null" >
+        c_cloudTrialNum = #{cCloudtrialnum,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cBank != null" >
+        c_bank = #{cBank,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cBankaccountname != null" >
+        c_bankAccountName = #{cBankaccountname,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cBankbranch != null" >
+        c_bankBranch = #{cBankbranch,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cBankaccount != null" >
+        c_bankAccount = #{cBankaccount,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="cPoint != null" >
+        c_point = #{cPoint,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.liw.model.AppFdRrUserWithBLOBs" >
+    update app_fd_rr_user
+    set dateCreated = #{datecreated,jdbcType=TIMESTAMP},
+      dateModified = #{datemodified,jdbcType=TIMESTAMP},
+      c_technique = #{cTechnique,jdbcType=LONGVARCHAR},
+      c_mobile_id = #{cMobileId,jdbcType=LONGVARCHAR},
+      c_birthdatePermission = #{cBirthdatepermission,jdbcType=LONGVARCHAR},
+      c_location = #{cLocation,jdbcType=LONGVARCHAR},
+      c_devRqstDate = #{cDevrqstdate,jdbcType=LONGVARCHAR},
+      c_identified = #{cIdentified,jdbcType=LONGVARCHAR},
+      c_password = #{cPassword,jdbcType=LONGVARCHAR},
+      c_city = #{cCity,jdbcType=LONGVARCHAR},
+      c_weixin_id = #{cWeixinId,jdbcType=LONGVARCHAR},
+      c_setPasswordTime = #{cSetpasswordtime,jdbcType=LONGVARCHAR},
+      c_devProfile = #{cDevprofile,jdbcType=LONGVARCHAR},
+      c_username = #{cUsername,jdbcType=LONGVARCHAR},
+      c_level = #{cLevel,jdbcType=LONGVARCHAR},
+      c_skilledIn = #{cSkilledin,jdbcType=LONGVARCHAR},
+      c_province = #{cProvince,jdbcType=LONGVARCHAR},
+      c_gender = #{cGender,jdbcType=LONGVARCHAR},
+      c_licensePhoto = #{cLicensephoto,jdbcType=LONGVARCHAR},
+      c_email_id = #{cEmailId,jdbcType=LONGVARCHAR},
+      c_contactQQ = #{cContactqq,jdbcType=LONGVARCHAR},
+      c_regiUriAvailable = #{cRegiuriavailable,jdbcType=LONGVARCHAR},
+      c_enterprise = #{cEnterprise,jdbcType=LONGVARCHAR},
+      c_devBrand = #{cDevbrand,jdbcType=LONGVARCHAR},
+      c_identityCard = #{cIdentitycard,jdbcType=LONGVARCHAR},
+      c_devRqstStatus = #{cDevrqststatus,jdbcType=LONGVARCHAR},
+      c_companyName = #{cCompanyname,jdbcType=LONGVARCHAR},
+      c_avatar = #{cAvatar,jdbcType=LONGVARCHAR},
+      c_qq_id = #{cQqId,jdbcType=LONGVARCHAR},
+      c_country = #{cCountry,jdbcType=LONGVARCHAR},
+      c_identCardPhoto = #{cIdentcardphoto,jdbcType=LONGVARCHAR},
+      c_active = #{cActive,jdbcType=LONGVARCHAR},
+      c_regiUri = #{cRegiuri,jdbcType=LONGVARCHAR},
+      c_setPasswordUri = #{cSetpassworduri,jdbcType=LONGVARCHAR},
+      c_regiRequestTime = #{cRegirequesttime,jdbcType=LONGVARCHAR},
+      c_adminComment = #{cAdmincomment,jdbcType=LONGVARCHAR},
+      c_registerDate = #{cRegisterdate,jdbcType=LONGVARCHAR},
+      c_pwUriAvailable = #{cPwuriavailable,jdbcType=LONGVARCHAR},
+      c_mobilePermission = #{cMobilepermission,jdbcType=LONGVARCHAR},
+      c_devCertifiedDate = #{cDevcertifieddate,jdbcType=LONGVARCHAR},
+      c_contact = #{cContact,jdbcType=LONGVARCHAR},
+      c_qqPermission = #{cQqpermission,jdbcType=LONGVARCHAR},
+      c_birthdate = #{cBirthdate,jdbcType=LONGVARCHAR},
+      c_devFlag = #{cDevflag,jdbcType=LONGVARCHAR},
+      c_devApproveDate = #{cDevapprovedate,jdbcType=LONGVARCHAR},
+      c_profile = #{cProfile,jdbcType=LONGVARCHAR},
+      c_developerType = #{cDevelopertype,jdbcType=LONGVARCHAR},
+      c_licenseNum = #{cLicensenum,jdbcType=LONGVARCHAR},
+      c_identityType = #{cIdentitytype,jdbcType=LONGVARCHAR},
+      c_contactPhone = #{cContactphone,jdbcType=LONGVARCHAR},
+      c_itPerson = #{cItperson,jdbcType=LONGVARCHAR},
+      c_devRqstUpdate = #{cDevrqstupdate,jdbcType=LONGVARCHAR},
+      c_weibo_id = #{cWeiboId,jdbcType=LONGVARCHAR},
+      c_devLevel = #{cDevlevel,jdbcType=LONGVARCHAR},
+      c_realName = #{cRealname,jdbcType=LONGVARCHAR},
+      c_devEmailInfo = #{cDevemailinfo,jdbcType=LONGVARCHAR},
+      c_messageMail = #{cMessagemail,jdbcType=LONGVARCHAR},
+      c_internalName = #{cInternalname,jdbcType=LONGVARCHAR},
+      c_internalRoleRemark = #{cInternalroleremark,jdbcType=LONGVARCHAR},
+      c_internalRole = #{cInternalrole,jdbcType=LONGVARCHAR},
+      c_internal = #{cInternal,jdbcType=LONGVARCHAR},
+      c_favorableRate = #{cFavorablerate,jdbcType=LONGVARCHAR},
+      c_generalScore = #{cGeneralscore,jdbcType=LONGVARCHAR},
+      c_devFavorableRate = #{cDevfavorablerate,jdbcType=LONGVARCHAR},
+      c_devGeneralScore = #{cDevgeneralscore,jdbcType=LONGVARCHAR},
+      c_identCardPhotoVer = #{cIdentcardphotover,jdbcType=LONGVARCHAR},
+      c_licensePhotoVer = #{cLicensephotover,jdbcType=LONGVARCHAR},
+      c_identCardPhotoStamp = #{cIdentcardphotostamp,jdbcType=LONGVARCHAR},
+      c_licensePhotoStamp = #{cLicensephotostamp,jdbcType=LONGVARCHAR},
+      c_registerType = #{cRegistertype,jdbcType=LONGVARCHAR},
+      c_emailPermission = #{cEmailpermission,jdbcType=LONGVARCHAR},
+      c_rename = #{cRename,jdbcType=LONGVARCHAR},
+      c_weibo_openid = #{cWeiboOpenid,jdbcType=LONGVARCHAR},
+      c_qq_token = #{cQqToken,jdbcType=LONGVARCHAR},
+      c_weibo_expiry = #{cWeiboExpiry,jdbcType=LONGVARCHAR},
+      c_qq_expiry = #{cQqExpiry,jdbcType=LONGVARCHAR},
+      c_weixin_openid = #{cWeixinOpenid,jdbcType=LONGVARCHAR},
+      c_weixin_expiry = #{cWeixinExpiry,jdbcType=LONGVARCHAR},
+      c_weixin_token = #{cWeixinToken,jdbcType=LONGVARCHAR},
+      c_weibo_token = #{cWeiboToken,jdbcType=LONGVARCHAR},
+      c_qq_openid = #{cQqOpenid,jdbcType=LONGVARCHAR},
+      c_identifyDate = #{cIdentifydate,jdbcType=LONGVARCHAR},
+      c_cloudTrialNum = #{cCloudtrialnum,jdbcType=LONGVARCHAR},
+      c_bank = #{cBank,jdbcType=LONGVARCHAR},
+      c_bankAccountName = #{cBankaccountname,jdbcType=LONGVARCHAR},
+      c_bankBranch = #{cBankbranch,jdbcType=LONGVARCHAR},
+      c_bankAccount = #{cBankaccount,jdbcType=LONGVARCHAR},
+      c_point = #{cPoint,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.liw.model.AppFdRrUser" >
+    update app_fd_rr_user
+    set dateCreated = #{datecreated,jdbcType=TIMESTAMP},
+      dateModified = #{datemodified,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+
+
+</mapper>
